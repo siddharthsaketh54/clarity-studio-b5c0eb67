@@ -9,38 +9,75 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WorkChangebagRouteImport } from './routes/work.changebag'
+import { Route as WorkAgentdnaRouteImport } from './routes/work.agentdna'
 
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkChangebagRoute = WorkChangebagRouteImport.update({
+  id: '/work/changebag',
+  path: '/work/changebag',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkAgentdnaRoute = WorkAgentdnaRouteImport.update({
+  id: '/work/agentdna',
+  path: '/work/agentdna',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/work/agentdna': typeof WorkAgentdnaRoute
+  '/work/changebag': typeof WorkChangebagRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/work/agentdna': typeof WorkAgentdnaRoute
+  '/work/changebag': typeof WorkChangebagRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/work/agentdna': typeof WorkAgentdnaRoute
+  '/work/changebag': typeof WorkChangebagRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/about' | '/work/agentdna' | '/work/changebag'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/about' | '/work/agentdna' | '/work/changebag'
+  id: '__root__' | '/' | '/about' | '/work/agentdna' | '/work/changebag'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  WorkAgentdnaRoute: typeof WorkAgentdnaRoute
+  WorkChangebagRoute: typeof WorkChangebagRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +85,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/changebag': {
+      id: '/work/changebag'
+      path: '/work/changebag'
+      fullPath: '/work/changebag'
+      preLoaderRoute: typeof WorkChangebagRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/agentdna': {
+      id: '/work/agentdna'
+      path: '/work/agentdna'
+      fullPath: '/work/agentdna'
+      preLoaderRoute: typeof WorkAgentdnaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  WorkAgentdnaRoute: WorkAgentdnaRoute,
+  WorkChangebagRoute: WorkChangebagRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
