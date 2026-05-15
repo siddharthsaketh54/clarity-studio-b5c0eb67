@@ -78,7 +78,7 @@ function ChangebagCase() {
           <div className="mt-32 grid grid-cols-12 gap-x-8 gap-y-24">
             {/* Stage marker */}
             <div className="col-span-12 md:col-span-2">
-              <p className="md:sticky md:top-24 text-[12px] uppercase tracking-wider text-muted-foreground">
+              <p className="md:sticky md:top-24 text-[12px] text-muted-foreground">
                 Stage 01
                 <br />
                 <span className="text-foreground">Research</span>
@@ -245,7 +245,7 @@ function ChangebagCase() {
                   long-term societal value.
                 </P>
                 <div className="mt-8 border border-hairline rounded-sm p-6 md:p-8 bg-muted/40">
-                  <p className="text-[12px] uppercase tracking-wider text-muted-foreground mb-3">
+                  <p className="text-[12px] text-muted-foreground mb-3">
                     Opportunity Identified
                   </p>
                   <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed tracking-[-0.005em]">
@@ -264,7 +264,7 @@ function ChangebagCase() {
                   participation, and socially responsible brands.
                 </P>
                 <P>This led to the core strategic direction for Changebag:</P>
-                <p className="mt-8 text-[clamp(1.35rem,2.2vw,1.85rem)] leading-[1.25] tracking-[-0.018em] font-medium text-balance max-w-[34ch]">
+                <p className="mt-8 text-[20px] md:text-[24px] leading-[1.25] tracking-[-0.018em] font-medium text-balance max-w-[34ch]">
                   Designing a sustainable marketing ecosystem where brand
                   visibility is created through measurable positive impact
                   rather than interruption-based advertising.
@@ -282,11 +282,11 @@ function ChangebagCase() {
                 rel="noopener noreferrer"
                 className="group block border border-hairline rounded-sm p-8 md:p-10 hover:bg-muted/50 transition-colors"
               >
-                <p className="text-[12px] uppercase tracking-wider text-muted-foreground">
+                <p className="text-[12px] text-muted-foreground">
                   Visit the live platform
                 </p>
                 <div className="mt-3 flex items-center justify-between">
-                  <span className="text-[clamp(1.5rem,2.6vw,2.25rem)] tracking-[-0.02em] font-medium">
+                  <span className="text-[22px] md:text-[28px] tracking-[-0.02em] font-medium">
                     changebag.io
                   </span>
                   <ArrowUpRight className="w-6 h-6 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
@@ -297,12 +297,12 @@ function ChangebagCase() {
 
           {/* Next */}
           <div className="mt-40 border-t border-hairline pt-10 flex items-end justify-between">
-            <span className="text-[13px] uppercase tracking-wider text-muted-foreground">
+            <span className="text-[13px] text-muted-foreground">
               Next
             </span>
             <Link
               to="/work/agentdna"
-              className="text-[clamp(1.5rem,3vw,2.5rem)] tracking-[-0.02em] font-medium link-underline"
+              className="text-[20px] md:text-[26px] tracking-[-0.02em] font-medium accent-link"
             >
               AgentDNA →
             </Link>
@@ -329,7 +329,7 @@ function Meta({ label, children }: { label: string; children: ReactNode }) {
 function Section({ label, children }: { label: string; children: ReactNode }) {
   return (
     <section>
-      <p className="text-[13px] uppercase tracking-wider text-muted-foreground border-b border-hairline pb-3 mb-8">
+      <p className="text-[13px] text-muted-foreground border-b border-hairline pb-3 mb-8">
         {label}
       </p>
       <div className="space-y-6 max-w-[62ch]">{children}</div>
@@ -340,7 +340,7 @@ function Section({ label, children }: { label: string; children: ReactNode }) {
 function P({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <p
-      className={`text-[clamp(1.05rem,1.4vw,1.2rem)] leading-relaxed tracking-[-0.005em] ${className}`}
+      className={`text-[15px] leading-relaxed tracking-[-0.005em] ${className}`}
     >
       {children}
     </p>
@@ -353,7 +353,7 @@ function List({ items }: { items: string[] }) {
       {items.map((it, i) => (
         <li
           key={i}
-          className="flex gap-4 text-[clamp(1.05rem,1.4vw,1.2rem)] leading-relaxed tracking-[-0.005em]"
+          className="flex gap-4 text-[15px] leading-relaxed tracking-[-0.005em]"
         >
           <span className="text-muted-foreground tabular-nums w-6 shrink-0">
             {String(i + 1).padStart(2, "0")}
@@ -377,7 +377,7 @@ function Bullet({ children }: { children: ReactNode }) {
 function Pullquote({ children }: { children: ReactNode }) {
   return (
     <blockquote className="border-l border-foreground pl-6 md:pl-8 py-2 max-w-[60ch]">
-      <p className="text-[clamp(1.35rem,2.2vw,1.85rem)] leading-[1.25] tracking-[-0.018em] font-medium text-balance">
+      <p className="text-[20px] md:text-[24px] leading-[1.25] tracking-[-0.018em] font-medium text-balance">
         {children}
       </p>
     </blockquote>
@@ -387,12 +387,12 @@ function Pullquote({ children }: { children: ReactNode }) {
 function QGroup({ title, questions }: { title: string; questions: string[] }) {
   return (
     <div className="border-t border-hairline pt-5">
-      <p className="text-[12px] uppercase tracking-wider text-muted-foreground mb-3">{title}</p>
+      <p className="text-[12px] text-muted-foreground mb-3">{title}</p>
       <ul className="space-y-2">
         {questions.map((q, i) => (
           <li
             key={i}
-            className="text-[clamp(1.05rem,1.4vw,1.2rem)] leading-relaxed tracking-[-0.005em]"
+            className="text-[15px] leading-relaxed tracking-[-0.005em]"
           >
             {q}
           </li>
@@ -419,7 +419,7 @@ function Method({
         {n}
       </span>
       <div className="col-span-10 md:col-span-11 space-y-2">
-        <h4 className="text-[clamp(1.1rem,1.6vw,1.35rem)] tracking-[-0.012em] font-medium">
+        <h4 className="text-[16px] tracking-[-0.012em] font-medium">
           {title}
         </h4>
         <p className="text-[15px] leading-relaxed text-muted-foreground">{body}</p>
@@ -446,11 +446,11 @@ function Finding({
         {n}
       </span>
       <div className="col-span-10 md:col-span-11 space-y-3">
-        <h4 className="text-[clamp(1.15rem,1.8vw,1.5rem)] tracking-[-0.015em] font-medium">
+        <h4 className="text-[17px] tracking-[-0.015em] font-medium">
           {title}
         </h4>
         <p className="text-[15px] leading-relaxed text-muted-foreground">{body}</p>
-        <p className="text-[14px] uppercase tracking-wider text-foreground pt-2">
+        <p className="text-[14px] text-foreground pt-2">
           Insight ·{" "}
           <span className="normal-case tracking-normal text-[15px] text-foreground/90">
             {insight}
