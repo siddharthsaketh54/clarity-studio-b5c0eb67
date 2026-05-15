@@ -207,11 +207,8 @@ function Index() {
           </div>
         </section>
       </div>
-
-      <footer className="mx-auto max-w-[1280px] mt-32 text-[12px] text-muted-foreground flex justify-between">
-        <span>© {new Date().getFullYear()} Siddharth</span>
-        <span>Available for select projects · 2026</span>
-      </footer>
-    </main>
+      </main>
+      <SiteFooter />
+    </>
   );
 }
