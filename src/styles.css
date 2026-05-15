@@ -30,13 +30,15 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-hairline: var(--hairline);
+  --color-accent-link: var(--accent-link);
 }
 
 :root {
   --radius: 0.25rem;
-  /* Off-white paper */
-  --background: oklch(0.985 0.002 95);
-  --foreground: oklch(0.18 0.005 260);
+  /* Warm light gray paper */
+  --background: oklch(0.955 0.003 95);
+  --foreground: oklch(0.22 0.005 260);
+  --accent-link: oklch(0.55 0.18 260);
   --card: oklch(0.985 0.002 95);
   --card-foreground: oklch(0.18 0.005 260);
   --popover: oklch(0.985 0.002 95);
@@ -128,6 +130,37 @@
   }
 
   .text-balance { text-wrap: balance; }
+
+  .accent-link {
+    color: var(--color-accent-link);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in oklab, var(--color-accent-link) 40%, transparent);
+    transition: text-decoration-color 0.3s ease;
+  }
+  .accent-link:hover {
+    text-decoration-color: var(--color-accent-link);
+  }
+
+  .contact-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    width: 100%;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid var(--color-hairline);
+    border-radius: 6px;
+    background: color-mix(in oklab, var(--color-background) 60%, white 40%);
+    font-size: 14px;
+    color: var(--color-foreground);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+    text-align: left;
+  }
+  .contact-pill:hover {
+    background: color-mix(in oklab, var(--color-background) 30%, white 70%);
+    border-color: color-mix(in oklab, var(--color-foreground) 20%, transparent);
+  }
 
   .link-underline {
     position: relative;
