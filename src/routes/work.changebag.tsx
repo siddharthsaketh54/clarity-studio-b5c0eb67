@@ -311,7 +311,7 @@ function ChangebagCase() {
       </main>
 
       <SiteFooter />
-    </div>
+    </>
   );
 }
 
