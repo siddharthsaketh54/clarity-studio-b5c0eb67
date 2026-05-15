@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Copy, Check, Calendar } from "lucide-react";
+import { SiteNav } from "@/components/SiteNav";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -69,7 +71,9 @@ function Index() {
   };
 
   return (
-    <main className="min-h-screen px-6 md:px-16 lg:px-24 py-16 md:py-28">
+    <>
+      <SiteNav />
+      <main id="work" className="px-6 md:px-16 lg:px-24 pt-20 md:pt-28">
       <div className="mx-auto max-w-[1280px] grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
         {/* Left column — bio */}
         <section className="lg:col-span-5 fade-up">
@@ -203,11 +207,8 @@ function Index() {
           </div>
         </section>
       </div>
-
-      <footer className="mx-auto max-w-[1280px] mt-32 text-[12px] text-muted-foreground flex justify-between">
-        <span>© {new Date().getFullYear()} Siddharth</span>
-        <span>Available for select projects · 2026</span>
-      </footer>
-    </main>
+      </main>
+      <SiteFooter />
+    </>
   );
 }

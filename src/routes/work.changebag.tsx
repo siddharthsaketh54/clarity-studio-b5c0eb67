@@ -26,42 +26,40 @@ export const Route = createFileRoute("/work/changebag")({
 
 function ChangebagCase() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <SiteNav />
 
-      <main className="pt-32 md:pt-44 px-6 md:px-10">
-        <div className="mx-auto max-w-[1400px]">
-          <Link to="/" hash="work" className="text-[13px] text-muted-foreground link-underline">
+      <main className="px-6 md:px-16 lg:px-24 pt-20 md:pt-28">
+        <div className="mx-auto max-w-[1280px]">
+          <Link to="/" className="text-[13px] accent-link">
             ← Selected work
           </Link>
 
           {/* Header */}
           <div className="mt-12 fade-up">
-            <div className="flex items-center gap-3 mb-8 text-[12px] uppercase tracking-wider">
+            <div className="flex flex-wrap items-center gap-3 mb-8 text-[12px]">
               <span className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-hairline">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60 animate-ping" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
                 </span>
-                <span className="text-foreground">Project Status — Live</span>
+                <span className="text-foreground">Project status — Live</span>
               </span>
               <a
                 href="https://changebag.io"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-muted-foreground link-underline normal-case tracking-normal text-[13px]"
+                className="inline-flex items-center gap-1 accent-link text-[13px]"
               >
                 changebag.io <ArrowUpRight className="w-3 h-3" />
               </a>
             </div>
 
-            <p className="text-[13px] uppercase tracking-wider text-muted-foreground mb-6">
-              02 — Case Study
-            </p>
-            <h1 className="text-balance text-[clamp(2.25rem,5.5vw,4.75rem)] leading-[1.05] tracking-[-0.025em] font-medium max-w-[20ch]">
+            <p className="text-[13px] text-muted-foreground mb-3">02 · Case Study</p>
+            <h1 className="text-[28px] md:text-[40px] leading-[1.1] tracking-[-0.02em] font-medium">
               Changebag
             </h1>
-            <p className="mt-8 text-[clamp(1.15rem,1.7vw,1.5rem)] leading-snug text-muted-foreground max-w-[44ch] tracking-[-0.01em]">
+            <p className="mt-4 text-[16px] md:text-[18px] leading-[1.5] text-foreground/80 max-w-[44ch]">
               A human-centered marketing ecosystem that transforms advertising
               spend into measurable social impact.
             </p>
@@ -80,7 +78,7 @@ function ChangebagCase() {
           <div className="mt-32 grid grid-cols-12 gap-x-8 gap-y-24">
             {/* Stage marker */}
             <div className="col-span-12 md:col-span-2">
-              <p className="md:sticky md:top-24 text-[12px] uppercase tracking-wider text-muted-foreground">
+              <p className="md:sticky md:top-24 text-[12px] text-muted-foreground">
                 Stage 01
                 <br />
                 <span className="text-foreground">Research</span>
@@ -247,7 +245,7 @@ function ChangebagCase() {
                   long-term societal value.
                 </P>
                 <div className="mt-8 border border-hairline rounded-sm p-6 md:p-8 bg-muted/40">
-                  <p className="text-[12px] uppercase tracking-wider text-muted-foreground mb-3">
+                  <p className="text-[12px] text-muted-foreground mb-3">
                     Opportunity Identified
                   </p>
                   <p className="text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed tracking-[-0.005em]">
@@ -266,7 +264,7 @@ function ChangebagCase() {
                   participation, and socially responsible brands.
                 </P>
                 <P>This led to the core strategic direction for Changebag:</P>
-                <p className="mt-8 text-[clamp(1.35rem,2.2vw,1.85rem)] leading-[1.25] tracking-[-0.018em] font-medium text-balance max-w-[34ch]">
+                <p className="mt-8 text-[20px] md:text-[24px] leading-[1.25] tracking-[-0.018em] font-medium text-balance max-w-[34ch]">
                   Designing a sustainable marketing ecosystem where brand
                   visibility is created through measurable positive impact
                   rather than interruption-based advertising.
@@ -284,11 +282,11 @@ function ChangebagCase() {
                 rel="noopener noreferrer"
                 className="group block border border-hairline rounded-sm p-8 md:p-10 hover:bg-muted/50 transition-colors"
               >
-                <p className="text-[12px] uppercase tracking-wider text-muted-foreground">
+                <p className="text-[12px] text-muted-foreground">
                   Visit the live platform
                 </p>
                 <div className="mt-3 flex items-center justify-between">
-                  <span className="text-[clamp(1.5rem,2.6vw,2.25rem)] tracking-[-0.02em] font-medium">
+                  <span className="text-[22px] md:text-[28px] tracking-[-0.02em] font-medium">
                     changebag.io
                   </span>
                   <ArrowUpRight className="w-6 h-6 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
@@ -299,12 +297,12 @@ function ChangebagCase() {
 
           {/* Next */}
           <div className="mt-40 border-t border-hairline pt-10 flex items-end justify-between">
-            <span className="text-[13px] uppercase tracking-wider text-muted-foreground">
+            <span className="text-[13px] text-muted-foreground">
               Next
             </span>
             <Link
               to="/work/agentdna"
-              className="text-[clamp(1.5rem,3vw,2.5rem)] tracking-[-0.02em] font-medium link-underline"
+              className="text-[20px] md:text-[26px] tracking-[-0.02em] font-medium accent-link"
             >
               AgentDNA →
             </Link>
@@ -313,7 +311,7 @@ function ChangebagCase() {
       </main>
 
       <SiteFooter />
-    </div>
+    </>
   );
 }
 
@@ -331,7 +329,7 @@ function Meta({ label, children }: { label: string; children: ReactNode }) {
 function Section({ label, children }: { label: string; children: ReactNode }) {
   return (
     <section>
-      <p className="text-[13px] uppercase tracking-wider text-muted-foreground border-b border-hairline pb-3 mb-8">
+      <p className="text-[13px] text-muted-foreground border-b border-hairline pb-3 mb-8">
         {label}
       </p>
       <div className="space-y-6 max-w-[62ch]">{children}</div>
@@ -342,7 +340,7 @@ function Section({ label, children }: { label: string; children: ReactNode }) {
 function P({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <p
-      className={`text-[clamp(1.05rem,1.4vw,1.2rem)] leading-relaxed tracking-[-0.005em] ${className}`}
+      className={`text-[15px] leading-relaxed tracking-[-0.005em] ${className}`}
     >
       {children}
     </p>
@@ -355,7 +353,7 @@ function List({ items }: { items: string[] }) {
       {items.map((it, i) => (
         <li
           key={i}
-          className="flex gap-4 text-[clamp(1.05rem,1.4vw,1.2rem)] leading-relaxed tracking-[-0.005em]"
+          className="flex gap-4 text-[15px] leading-relaxed tracking-[-0.005em]"
         >
           <span className="text-muted-foreground tabular-nums w-6 shrink-0">
             {String(i + 1).padStart(2, "0")}
@@ -379,7 +377,7 @@ function Bullet({ children }: { children: ReactNode }) {
 function Pullquote({ children }: { children: ReactNode }) {
   return (
     <blockquote className="border-l border-foreground pl-6 md:pl-8 py-2 max-w-[60ch]">
-      <p className="text-[clamp(1.35rem,2.2vw,1.85rem)] leading-[1.25] tracking-[-0.018em] font-medium text-balance">
+      <p className="text-[20px] md:text-[24px] leading-[1.25] tracking-[-0.018em] font-medium text-balance">
         {children}
       </p>
     </blockquote>
@@ -389,12 +387,12 @@ function Pullquote({ children }: { children: ReactNode }) {
 function QGroup({ title, questions }: { title: string; questions: string[] }) {
   return (
     <div className="border-t border-hairline pt-5">
-      <p className="text-[12px] uppercase tracking-wider text-muted-foreground mb-3">{title}</p>
+      <p className="text-[12px] text-muted-foreground mb-3">{title}</p>
       <ul className="space-y-2">
         {questions.map((q, i) => (
           <li
             key={i}
-            className="text-[clamp(1.05rem,1.4vw,1.2rem)] leading-relaxed tracking-[-0.005em]"
+            className="text-[15px] leading-relaxed tracking-[-0.005em]"
           >
             {q}
           </li>
@@ -421,7 +419,7 @@ function Method({
         {n}
       </span>
       <div className="col-span-10 md:col-span-11 space-y-2">
-        <h4 className="text-[clamp(1.1rem,1.6vw,1.35rem)] tracking-[-0.012em] font-medium">
+        <h4 className="text-[16px] tracking-[-0.012em] font-medium">
           {title}
         </h4>
         <p className="text-[15px] leading-relaxed text-muted-foreground">{body}</p>
@@ -448,11 +446,11 @@ function Finding({
         {n}
       </span>
       <div className="col-span-10 md:col-span-11 space-y-3">
-        <h4 className="text-[clamp(1.15rem,1.8vw,1.5rem)] tracking-[-0.015em] font-medium">
+        <h4 className="text-[17px] tracking-[-0.015em] font-medium">
           {title}
         </h4>
         <p className="text-[15px] leading-relaxed text-muted-foreground">{body}</p>
-        <p className="text-[14px] uppercase tracking-wider text-foreground pt-2">
+        <p className="text-[14px] text-foreground pt-2">
           Insight ·{" "}
           <span className="normal-case tracking-normal text-[15px] text-foreground/90">
             {insight}
