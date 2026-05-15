@@ -30,13 +30,15 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-hairline: var(--hairline);
+  --color-accent-link: var(--accent-link);
 }
 
 :root {
   --radius: 0.25rem;
-  /* Off-white paper */
-  --background: oklch(0.985 0.002 95);
-  --foreground: oklch(0.18 0.005 260);
+  /* Warm light gray paper */
+  --background: oklch(0.955 0.003 95);
+  --foreground: oklch(0.22 0.005 260);
+  --accent-link: oklch(0.55 0.18 260);
   --card: oklch(0.985 0.002 95);
   --card-foreground: oklch(0.18 0.005 260);
   --popover: oklch(0.985 0.002 95);
