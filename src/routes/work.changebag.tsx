@@ -26,42 +26,40 @@ export const Route = createFileRoute("/work/changebag")({
 
 function ChangebagCase() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <SiteNav />
 
-      <main className="pt-32 md:pt-44 px-6 md:px-10">
-        <div className="mx-auto max-w-[1400px]">
-          <Link to="/" hash="work" className="text-[13px] text-muted-foreground link-underline">
+      <main className="px-6 md:px-16 lg:px-24 pt-20 md:pt-28">
+        <div className="mx-auto max-w-[1280px]">
+          <Link to="/" className="text-[13px] accent-link">
             ← Selected work
           </Link>
 
           {/* Header */}
           <div className="mt-12 fade-up">
-            <div className="flex items-center gap-3 mb-8 text-[12px] uppercase tracking-wider">
+            <div className="flex flex-wrap items-center gap-3 mb-8 text-[12px]">
               <span className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-hairline">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60 animate-ping" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
                 </span>
-                <span className="text-foreground">Project Status — Live</span>
+                <span className="text-foreground">Project status — Live</span>
               </span>
               <a
                 href="https://changebag.io"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-muted-foreground link-underline normal-case tracking-normal text-[13px]"
+                className="inline-flex items-center gap-1 accent-link text-[13px]"
               >
                 changebag.io <ArrowUpRight className="w-3 h-3" />
               </a>
             </div>
 
-            <p className="text-[13px] uppercase tracking-wider text-muted-foreground mb-6">
-              02 — Case Study
-            </p>
-            <h1 className="text-balance text-[clamp(2.25rem,5.5vw,4.75rem)] leading-[1.05] tracking-[-0.025em] font-medium max-w-[20ch]">
+            <p className="text-[13px] text-muted-foreground mb-3">02 · Case Study</p>
+            <h1 className="text-[28px] md:text-[40px] leading-[1.1] tracking-[-0.02em] font-medium">
               Changebag
             </h1>
-            <p className="mt-8 text-[clamp(1.15rem,1.7vw,1.5rem)] leading-snug text-muted-foreground max-w-[44ch] tracking-[-0.01em]">
+            <p className="mt-4 text-[16px] md:text-[18px] leading-[1.5] text-foreground/80 max-w-[44ch]">
               A human-centered marketing ecosystem that transforms advertising
               spend into measurable social impact.
             </p>
