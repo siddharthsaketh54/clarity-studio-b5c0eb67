@@ -301,10 +301,10 @@ function ChangebagCase() {
               Next
             </span>
             <Link
-              to="/work/agentdna"
+              to="/work/xd-motion"
               className="text-[20px] md:text-[26px] tracking-[-0.02em] font-medium accent-link"
             >
-              AgentDNA →
+              xD in Motion →
             </Link>
           </div>
         </div>

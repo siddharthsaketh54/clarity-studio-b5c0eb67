@@ -12,7 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WorkXdMotionRouteImport } from './routes/work.xd-motion'
 import { Route as WorkChangebagRouteImport } from './routes/work.changebag'
+import { Route as WorkBmtcRouteImport } from './routes/work.bmtc'
 import { Route as WorkAgentdnaRouteImport } from './routes/work.agentdna'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -30,9 +32,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkXdMotionRoute = WorkXdMotionRouteImport.update({
+  id: '/work/xd-motion',
+  path: '/work/xd-motion',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WorkChangebagRoute = WorkChangebagRouteImport.update({
   id: '/work/changebag',
   path: '/work/changebag',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkBmtcRoute = WorkBmtcRouteImport.update({
+  id: '/work/bmtc',
+  path: '/work/bmtc',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkAgentdnaRoute = WorkAgentdnaRouteImport.update({
@@ -46,14 +58,18 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work/agentdna': typeof WorkAgentdnaRoute
+  '/work/bmtc': typeof WorkBmtcRoute
   '/work/changebag': typeof WorkChangebagRoute
+  '/work/xd-motion': typeof WorkXdMotionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work/agentdna': typeof WorkAgentdnaRoute
+  '/work/bmtc': typeof WorkBmtcRoute
   '/work/changebag': typeof WorkChangebagRoute
+  '/work/xd-motion': typeof WorkXdMotionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -61,7 +77,9 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work/agentdna': typeof WorkAgentdnaRoute
+  '/work/bmtc': typeof WorkBmtcRoute
   '/work/changebag': typeof WorkChangebagRoute
+  '/work/xd-motion': typeof WorkXdMotionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -70,16 +88,27 @@ export interface FileRouteTypes {
     | '/about'
     | '/sitemap.xml'
     | '/work/agentdna'
+    | '/work/bmtc'
     | '/work/changebag'
+    | '/work/xd-motion'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/sitemap.xml' | '/work/agentdna' | '/work/changebag'
+  to:
+    | '/'
+    | '/about'
+    | '/sitemap.xml'
+    | '/work/agentdna'
+    | '/work/bmtc'
+    | '/work/changebag'
+    | '/work/xd-motion'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/sitemap.xml'
     | '/work/agentdna'
+    | '/work/bmtc'
     | '/work/changebag'
+    | '/work/xd-motion'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -87,7 +116,9 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WorkAgentdnaRoute: typeof WorkAgentdnaRoute
+  WorkBmtcRoute: typeof WorkBmtcRoute
   WorkChangebagRoute: typeof WorkChangebagRoute
+  WorkXdMotionRoute: typeof WorkXdMotionRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -113,11 +144,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/xd-motion': {
+      id: '/work/xd-motion'
+      path: '/work/xd-motion'
+      fullPath: '/work/xd-motion'
+      preLoaderRoute: typeof WorkXdMotionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work/changebag': {
       id: '/work/changebag'
       path: '/work/changebag'
       fullPath: '/work/changebag'
       preLoaderRoute: typeof WorkChangebagRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/bmtc': {
+      id: '/work/bmtc'
+      path: '/work/bmtc'
+      fullPath: '/work/bmtc'
+      preLoaderRoute: typeof WorkBmtcRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/agentdna': {
@@ -135,7 +180,9 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WorkAgentdnaRoute: WorkAgentdnaRoute,
+  WorkBmtcRoute: WorkBmtcRoute,
   WorkChangebagRoute: WorkChangebagRoute,
+  WorkXdMotionRoute: WorkXdMotionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
