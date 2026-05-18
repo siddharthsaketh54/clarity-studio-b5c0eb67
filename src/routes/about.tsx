@@ -117,16 +117,11 @@ function AboutPage() {
               <h2 className="text-[13px] uppercase tracking-wider text-muted-foreground mb-4">
                 Elsewhere
               </h2>
-              <div className="text-[15px] space-y-1.5">
+              <div className="text-[15px]">
                 <p>
-                  <a href="mailto:hello@siddharth.design" className="accent-link">
-                    hello@siddharth.design
+                  <a href="mailto:siddharthsaketh54@gmail.com" className="accent-link">
+                    siddharthsaketh54@gmail.com
                   </a>
-                </p>
-                <p className="text-muted-foreground">
-                  <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className="accent-link">Behance</a>{" · "}
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="accent-link">LinkedIn</a>{" · "}
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="accent-link">Twitter</a>
                 </p>
               </div>
             </section>
