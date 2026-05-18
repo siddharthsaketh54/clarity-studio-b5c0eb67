@@ -7,14 +7,13 @@ export function SiteFooter() {
           <p>Designing clarity between people, systems, and technology.</p>
         </div>
         <div className="flex flex-col md:items-end gap-1.5">
-          <div className="flex gap-4">
-            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className="accent-link">Behance</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="accent-link">LinkedIn</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="accent-link">Twitter</a>
-          </div>
+          <a href="mailto:siddharthsaketh54@gmail.com" className="accent-link">
+            siddharthsaketh54@gmail.com
+          </a>
           <p className="tabular-nums mt-2">© {new Date().getFullYear()} Siddharth</p>
         </div>
       </div>
     </footer>
   );
 }
+

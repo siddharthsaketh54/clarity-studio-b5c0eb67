@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudy } from "@/components/CaseStudy";
+import agentDnaThumb from "@/assets/agentdna.jpg";
 
 export const Route = createFileRoute("/work/agentdna")({
   head: () => ({
@@ -21,6 +22,8 @@ export const Route = createFileRoute("/work/agentdna")({
         role: "Brand Strategy · Visual Identity · Guidelines",
         category: "Brand Guidelines",
         client: "AgentDNA",
+        tools: "Ps · Ai · Id",
+        heroImage: agentDnaThumb,
         intro:
           "AgentDNA builds infrastructure for autonomous AI agents. The guidelines codify a brand language that translates technical depth into a confident, human voice — without leaning on the visual clichés of the AI category.",
         problem:
