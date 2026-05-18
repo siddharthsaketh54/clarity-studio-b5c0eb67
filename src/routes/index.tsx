@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Copy, Check, Calendar } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import xdMotionThumb from "@/assets/xd-motion.jpg";
+import agentDnaThumb from "@/assets/agentdna.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -14,7 +16,8 @@ type Project = {
   date: string;
   href: string;
   external?: boolean;
-  thumb: string; // tailwind bg classes for placeholder
+  thumb: string;
+  image?: string;
   caption?: string;
 };
 
@@ -41,6 +44,7 @@ const projects: Project[] = [
     date: "03/2025",
     href: "/work/xd-motion",
     thumb: "from-stone-200 to-stone-100",
+    image: xdMotionThumb,
     caption: "An editorial publication on motion",
   },
   {
@@ -49,11 +53,12 @@ const projects: Project[] = [
     date: "08/2026",
     href: "/work/agentdna",
     thumb: "from-neutral-200 to-neutral-100",
+    image: agentDnaThumb,
     caption: "Brand guidelines for an AI agent platform",
   },
 ];
 
-const EMAIL = "hello@siddharth.design";
+const EMAIL = "siddharthsaketh54@gmail.com";
 
 function Index() {
   const [copied, setCopied] = useState(false);
@@ -83,22 +88,17 @@ function Index() {
           <div className="mt-10 space-y-5 text-[15px] leading-[1.6] text-foreground/85 max-w-[44ch]">
             <p>
               I'm a multidisciplinary designer working at the intersection of
-              product, brand, and communication. Clarity and intent are the two
-              guiding principles of my work.
+              human centered design, visual communication, and brand strategy.
+              My practice is rooted in curiosity, research, and building
+              thoughtful experiences that connect people with ideas in
+              meaningful ways.
             </p>
             <p>
-              I currently shape interfaces, identity systems, and strategy for{" "}
-              <a
-                href="https://changebag.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="accent-link"
-              >
-                Changebag
-              </a>{" "}
-              and selected studios across emerging tech, sustainability, and
-              culture — designing systems where people, brands, and technology
-              meet.
+              I'm interested in how design shapes perception through systems,
+              storytelling, interaction, and visual language. Whether I'm
+              working on brands, digital products, publications, or emerging
+              technology, I focus on creating work that feels intentional,
+              clear, and emotionally resonant.
             </p>
           </div>
 
@@ -131,31 +131,6 @@ function Index() {
               </span>
             </button>
 
-            <a
-              href="https://cal.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-pill"
-            >
-              <Calendar className="w-3.5 h-3.5 text-muted-foreground" />
-              <span>Schedule a meet</span>
-            </a>
-          </div>
-
-          <div className="mt-8 text-[14px] text-muted-foreground">
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="accent-link">
-              CV
-            </a>{" "}
-            ·{" "}
-            <a
-              href="https://www.behance.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="accent-link"
-            >
-              Behance
-            </a>
-            .
           </div>
         </section>
 
@@ -170,9 +145,17 @@ function Index() {
                   <div
                     className={`aspect-[4/3] w-full rounded-[6px] bg-gradient-to-br ${p.thumb} border border-hairline/70 overflow-hidden relative transition-transform duration-500 group-hover:-translate-y-0.5`}
                   >
-                    <div className="absolute inset-0 flex items-center justify-center text-[11px] uppercase tracking-wider text-foreground/30">
-                      {p.caption}
-                    </div>
+                    {p.image ? (
+                      <img
+                        src={p.image}
+                        alt={p.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-[11px] uppercase tracking-wider text-foreground/30">
+                        {p.caption}
+                      </div>
+                    )}
                   </div>
                   <div className="mt-3 flex items-baseline justify-between gap-4">
                     <div>
