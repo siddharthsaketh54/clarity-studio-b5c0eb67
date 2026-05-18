@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudy } from "@/components/CaseStudy";
+import agentDnaThumb from "@/assets/agentdna.jpg";
 
 export const Route = createFileRoute("/work/agentdna")({
   head: () => ({

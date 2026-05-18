@@ -11,6 +11,8 @@ export type CaseStudyData = {
   role: string;
   category: string;
   client: string;
+  tools?: string;
+  heroImage?: string;
   intro: string;
   problem: string;
   strategy: string;
@@ -44,10 +46,16 @@ export function CaseStudy({ data }: { data: CaseStudyData }) {
             </div>
 
             <div className="lg:col-span-7">
-              <div
-                className="aspect-[16/10] w-full rounded-[8px] bg-gradient-to-br from-stone-200 to-stone-50 border border-hairline/70 flex items-center justify-center text-[11px] uppercase tracking-wider text-foreground/30"
-              >
-                Visual mockup — {data.title}
+              <div className="aspect-[16/10] w-full rounded-[8px] bg-gradient-to-br from-stone-200 to-stone-50 border border-hairline/70 overflow-hidden flex items-center justify-center text-[11px] uppercase tracking-wider text-foreground/30">
+                {data.heroImage ? (
+                  <img
+                    src={data.heroImage}
+                    alt={data.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <>Visual mockup — {data.title}</>
+                )}
               </div>
             </div>
           </div>
@@ -57,7 +65,9 @@ export function CaseStudy({ data }: { data: CaseStudyData }) {
             <Meta label="Client">{data.client}</Meta>
             <Meta label="Year">{data.year}</Meta>
             <Meta label="Role">{data.role}</Meta>
-            <Meta label="Category">{data.category}</Meta>
+            <Meta label={data.tools ? "Tools" : "Category"}>
+              {data.tools ?? data.category}
+            </Meta>
           </dl>
 
           {/* Body — single editorial column */}

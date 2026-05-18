@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudy } from "@/components/CaseStudy";
+import xdMotionThumb from "@/assets/xd-motion.jpg";
 
 export const Route = createFileRoute("/work/xd-motion")({
   head: () => ({
