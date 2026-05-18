@@ -14,10 +14,11 @@ export type CaseStudyData = {
   tools?: string;
   heroImage?: string;
   intro: string;
-  problem: string;
-  strategy: string;
-  process: string[];
-  outcome: string;
+  problem?: string;
+  strategy?: string;
+  process?: string[];
+  outcome?: string;
+  link?: { href: string; label: string };
   next: { href: string; title: string };
 };
 
@@ -79,26 +80,41 @@ export function CaseStudy({ data }: { data: CaseStudyData }) {
             </div>
             <div className="lg:col-span-8 space-y-14 max-w-[60ch]">
               <Section label="Intro">{data.intro}</Section>
-              <Section label="Problem">{data.problem}</Section>
-              <Section label="Strategy">{data.strategy}</Section>
+              {data.problem && <Section label="Problem">{data.problem}</Section>}
+              {data.strategy && <Section label="Strategy">{data.strategy}</Section>}
 
-              <div>
-                <h2 className="text-[13px] uppercase tracking-wider text-muted-foreground mb-4">
-                  Process
-                </h2>
-                <ol className="divide-y divide-hairline border-y border-hairline">
-                  {data.process.map((step, i) => (
-                    <li key={i} className="py-4 flex gap-6 items-baseline">
-                      <span className="text-[13px] text-muted-foreground tabular-nums w-6">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="text-[15px] leading-[1.55]">{step}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
+              {data.process && data.process.length > 0 && (
+                <div>
+                  <h2 className="text-[13px] uppercase tracking-wider text-muted-foreground mb-4">
+                    Process
+                  </h2>
+                  <ol className="divide-y divide-hairline border-y border-hairline">
+                    {data.process.map((step, i) => (
+                      <li key={i} className="py-4 flex gap-6 items-baseline">
+                        <span className="text-[13px] text-muted-foreground tabular-nums w-6">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-[15px] leading-[1.55]">{step}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
 
-              <Section label="Outcome">{data.outcome}</Section>
+              {data.outcome && <Section label="Outcome">{data.outcome}</Section>}
+
+              {data.link && (
+                <div className="pt-4">
+                  <a
+                    href={data.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="accent-link text-[15px]"
+                  >
+                    {data.link.label} →
+                  </a>
+                </div>
+              )}
             </div>
           </div>
 

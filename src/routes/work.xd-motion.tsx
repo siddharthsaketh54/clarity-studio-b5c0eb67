@@ -33,20 +33,11 @@ export const Route = createFileRoute("/work/xd-motion")({
         tools: "Ps · Ai · Id",
         heroImage: xdMotionThumb,
         intro:
-          "xD in Motion is a long-form publication that frames motion not as decoration, but as a primary medium for communication. The issue gathers essays, interviews, and visual studies on how movement shapes perception, narrative, and emotion across screens and print.",
-        problem:
-          "Most coverage of motion design treats it as a finishing layer — easing curves, micro-interactions, transitions. The intent was to position motion as a discipline with its own grammar, history, and editorial weight, deserving of a publication that reads with the seriousness of a design quarterly.",
-        strategy:
-          "A confident editorial system: a single display serif for headlines, a humanist sans for body, and a rhythmic grid that lets imagery breathe. Sections are paced like a film — slow openings, dense middles, quiet closings — so the reading experience itself performs the subject matter.",
-        process: [
-          "Defined the editorial premise, voice, and section architecture.",
-          "Curated essays, contributors, and visual studies across motion practice.",
-          "Designed the typographic system, grid, and pacing model.",
-          "Art-directed photography, stills, and frame studies for each feature.",
-          "Produced the issue for print and a screen-native companion release.",
-        ],
-        outcome:
-          "xD in Motion launched as a self-published issue and a digital companion. It reframed motion as a literate, editorial subject and became a reference for the studio's later thinking on rhythm in interface design.",
+          "xD in Motion is a publication design project that explores how human experiences influence the way we perceive and connect with automobiles. While the narrative draws from motion, emotion, and driving culture, the project primarily focuses on the fundamentals of editorial and publication design. Through thoughtful typography, balanced visual aesthetics, structured layouts, controlled pagination, and careful use of whitespace, the publication was designed to create a smooth and engaging reading experience that allows the eyes to comfortably navigate through the content. The project also involved understanding the physical side of print design, including paper selection, material finishes, binding techniques, and production processes, helping bridge the gap between digital design decisions and tangible outcomes. xD in Motion became an exploration of how visual systems, materiality, and readability can come together to shape a refined publication experience.",
+        link: {
+          href: "https://www.behance.net/gallery/249562955/xD-in-Motion",
+          label: "View on Behance",
+        },
         next: { href: "/work/agentdna", title: "AgentDNA" },
       }}
     />
