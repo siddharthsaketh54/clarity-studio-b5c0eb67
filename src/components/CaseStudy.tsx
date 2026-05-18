@@ -14,10 +14,11 @@ export type CaseStudyData = {
   tools?: string;
   heroImage?: string;
   intro: string;
-  problem: string;
-  strategy: string;
-  process: string[];
-  outcome: string;
+  problem?: string;
+  strategy?: string;
+  process?: string[];
+  outcome?: string;
+  link?: { href: string; label: string };
   next: { href: string; title: string };
 };
 
