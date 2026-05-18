@@ -29,6 +29,8 @@ const focus = [
   { n: "04", label: "Digital Product Design", note: "Interfaces, interaction, design systems." },
 ];
 
+const tools = ["Ps", "Ai", "Id", "Figma"];
+
 function AboutPage() {
   return (
     <>
@@ -45,8 +47,7 @@ function AboutPage() {
 
             <dl className="mt-10 space-y-4 text-[14px]">
               <Row label="Based in">India / Remote</Row>
-              <Row label="Available">Select projects, 2026</Row>
-              <Row label="Tools">Figma, Framer, Notion, Linear</Row>
+              <Row label="Tools">{tools.join(" · ")}</Row>
             </dl>
 
             <div className="mt-10 text-[14px]">
@@ -62,23 +63,19 @@ function AboutPage() {
               </h2>
               <div className="space-y-5 text-[15px] leading-[1.65] text-foreground/85">
                 <p>
-                  I'm a multidisciplinary designer working at the intersection of
-                  brand, product, and emerging technology. My practice is rooted in
-                  research, typography, and the quiet craft of giving structure to
-                  ideas.
+                  I'm a multidisciplinary designer working at the intersection
+                  of human centered design, visual communication, and brand
+                  strategy. My practice is rooted in curiosity, research, and
+                  building thoughtful experiences that connect people with
+                  ideas in meaningful ways.
                 </p>
                 <p>
-                  I currently lead design at{" "}
-                  <a
-                    href="https://changebag.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="accent-link"
-                  >
-                    Changebag
-                  </a>
-                  , a sustainable marketing ecosystem, and collaborate with founders
-                  and studios across emerging tech, sustainability, and culture.
+                  I'm interested in how design shapes perception through
+                  systems, storytelling, interaction, and visual language.
+                  Whether I'm working on brands, digital products,
+                  publications, or emerging technology, I focus on creating
+                  work that feels intentional, clear, and emotionally
+                  resonant.
                 </p>
               </div>
             </section>
@@ -87,9 +84,11 @@ function AboutPage() {
               <h2 className="text-[13px] uppercase tracking-wider text-muted-foreground mb-4">
                 Philosophy
               </h2>
-              <p className="text-[20px] leading-[1.35] tracking-[-0.01em] text-foreground/90 max-w-[36ch]">
-                Design is the discipline of making intention visible — calmly,
-                carefully, and with respect for the reader.
+              <p className="text-[20px] leading-[1.35] tracking-[-0.01em] text-foreground/90 max-w-[42ch]">
+                Design is not just how something looks, but how it feels,
+                communicates, and stays with people. I believe in creating
+                work that is clear, intentional, and human — where every
+                detail has a purpose.
               </p>
             </section>
 
