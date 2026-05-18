@@ -30,6 +30,8 @@ export const Route = createFileRoute("/work/xd-motion")({
         role: "Editorial Design · Art Direction",
         category: "Publication Design",
         client: "Self-initiated",
+        tools: "Ps · Ai · Id",
+        heroImage: xdMotionThumb,
         intro:
           "xD in Motion is a long-form publication that frames motion not as decoration, but as a primary medium for communication. The issue gathers essays, interviews, and visual studies on how movement shapes perception, narrative, and emotion across screens and print.",
         problem:
