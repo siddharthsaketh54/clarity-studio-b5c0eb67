@@ -22,11 +22,6 @@ export function SiteNav() {
           <li>
             <Link to="/about" className="accent-link">About</Link>
           </li>
-          <li>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="accent-link">
-              CV
-            </a>
-          </li>
         </ul>
       </nav>
     </header>
