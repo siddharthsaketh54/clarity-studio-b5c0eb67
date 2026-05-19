@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import type { ReactNode } from "react";
+import bmtcPrototype from "@/assets/bmtc-prototype.png";
 
 export const Route = createFileRoute("/work/bmtc")({
   head: () => ({
@@ -305,21 +306,41 @@ function BMTCCase() {
               </Section>
 
               <Section label="Information Architecture Redesign">
-                <P>
-                  We redesigned the IA around the commuter's primary actions:
-                </P>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 mt-4">
-                  <Bullet>Track Bus</Bullet>
-                  <Bullet>Nearby Stops</Bullet>
-                  <Bullet>Plan Journey</Bullet>
-                  <Bullet>Tickets</Bullet>
-                  <Bullet>SOS</Bullet>
-                </div>
-                <P className="mt-6">
-                  Instead of burying actions inside layered menus, the
-                  redesigned structure prioritized map-first navigation,
-                  live visibility, and quick decision-making.
-                </P>
+                <Method
+                  n="01"
+                  title="Onboarding"
+                  body="Login, Sign in."
+                />
+                <Method
+                  n="02"
+                  title="Home Screen"
+                  body="Nav bar: Home, Nearby Stops, SOS, Tickets, Profile. Dynamic Search Bar: Recent searches, nearby stops, Route No."
+                />
+                <Method
+                  n="03"
+                  title="Nearby Stops"
+                  body="Dynamic Search Bar (to change location) — Recent Searches, Nearby Stops (based on current location), Route No. (Live Tracking). Breadcrumbs: BMTC · Metro · KSRTC. Multiple cards with Upcoming Buses (to pin location) — Bus No, Destination, ETA."
+                />
+                <Method
+                  n="04"
+                  title="Tickets"
+                  body="Ticket — QR scanner, Select to and from, select ticket type. Passes — Select pass, select pass type."
+                />
+                <Method
+                  n="05"
+                  title="Live Tracking"
+                  body="Current status of bus, Map."
+                />
+                <Method
+                  n="06"
+                  title="SOS Screen"
+                  body="BMTC helpline, Police, Ambulance, Fire."
+                />
+                <Method
+                  n="07"
+                  title="Profile"
+                  body="Name, etc., Share my location, Other Services, Feedback, Sign Out."
+                />
               </Section>
 
               <Section label="Key UX Interventions">
@@ -395,6 +416,101 @@ function BMTCCase() {
                   body="Clear communication directly affects whether users wait, leave, reroute, or abandon the system entirely."
                   insight="Better information design changes real-world commuter decisions."
                 />
+              </Section>
+
+              <Section label="Conclusion & Prototype">
+                <P>
+                  Given the limited project timeline, we decided to intervene
+                  primarily at the UI and experience layer rather than
+                  attempting to solve larger infrastructural or operational
+                  constraints within the BMTC ecosystem. Our focus became
+                  identifying the moments where commuters experienced the
+                  highest levels of confusion, anxiety, and distrust, and
+                  redesigning those interactions to feel clearer, calmer, and
+                  more dependable.
+                </P>
+                <P>
+                  Using the insights gathered through research, journey
+                  mapping, and system analysis, we quickly translated key
+                  pain points into low and mid fidelity wireframes that
+                  explored how the experience could become more seamless,
+                  transparent, and commuter centered. The intention was not
+                  to redesign every feature, but to demonstrate how
+                  thoughtful information hierarchy, reassurance systems,
+                  simplified navigation, and clearer feedback could
+                  significantly improve everyday public transit experiences.
+                </P>
+                <P>
+                  The project ultimately became an exploration of how
+                  interface design can influence emotional confidence in
+                  public systems. Even small UX interventions, when grounded
+                  in real commuter behavior, can help reduce uncertainty,
+                  support decision making, and make urban mobility feel more
+                  human.
+                </P>
+                <P>
+                  The existing Namma BMTC application suffered from
+                  fragmented navigation, unclear hierarchy, and overloaded
+                  interfaces that made essential commuter actions difficult
+                  to access. Core functions such as nearby stops, live
+                  tracking, ticketing, and SOS support were either hidden,
+                  disconnected, or dependent on external platforms,
+                  increasing commuter frustration and reducing trust in the
+                  system.
+                </P>
+                <P>
+                  The redesign focused on restructuring the information
+                  architecture around the commuter's primary needs and time
+                  sensitive decisions. Instead of prioritizing feature
+                  quantity, the new structure emphasized clarity,
+                  accessibility, and seamless navigation.
+                </P>
+                <P>
+                  The onboarding experience was simplified to create a more
+                  responsive and understandable login and sign in flow. The
+                  home screen was redesigned around a cleaner navigation
+                  system with direct access to Home, Nearby Stops, SOS,
+                  Tickets, and Profile, reducing clutter and improving
+                  discoverability. A dynamic search bar was introduced to
+                  support recent searches, nearby stops, and route number
+                  tracking from a single interaction point.
+                </P>
+                <P>
+                  A dedicated Nearby Stops section was added to help users
+                  quickly identify buses around their current location with
+                  live ETAs, route visibility, and pinned stop cards. Live
+                  Tracking was redesigned into a map centered experience
+                  that provided clearer bus status visibility and reduced
+                  uncertainty during waiting periods.
+                </P>
+                <P>
+                  The ticketing flow was integrated directly into the
+                  application through QR scanning, ticket selection, and
+                  pass management, eliminating the need to download
+                  external applications. The SOS system was repositioned as
+                  an immediately accessible feature, giving users quick
+                  access to emergency contacts without unnecessary barriers.
+                </P>
+                <P>
+                  Finally, a dedicated Profile section was introduced to
+                  centralize commuter information, location sharing,
+                  feedback, and additional services, creating a more
+                  complete and connected user experience.
+                </P>
+                <P>
+                  Overall, the redesign transformed the app from a
+                  cluttered feature based utility into a clearer, more
+                  commuter centered system focused on trust, usability, and
+                  real time decision making.
+                </P>
+                <div className="mt-10 -mx-2 md:-mx-6">
+                  <img
+                    src={bmtcPrototype}
+                    alt="Namma BMTC redesign — prototype screens covering onboarding, home, nearby stops, tickets, passes, and SOS."
+                    className="w-full h-auto rounded-[8px] border border-hairline/70"
+                    loading="lazy"
+                  />
+                </div>
               </Section>
 
               <Section label="Final Reflection">
