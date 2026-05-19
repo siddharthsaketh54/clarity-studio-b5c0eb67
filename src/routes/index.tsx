@@ -5,6 +5,8 @@ import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import xdMotionThumb from "@/assets/xd-motion.jpg";
 import agentDnaThumb from "@/assets/agentdna.jpg";
+import changebagThumb from "@/assets/changebag.jpg";
+import bmtcThumb from "@/assets/bmtc.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -28,6 +30,7 @@ const projects: Project[] = [
     date: "11/2026",
     href: "/work/changebag",
     thumb: "from-emerald-100 to-emerald-50",
+    image: changebagThumb,
     caption: "Sustainable marketing ecosystem",
   },
   {
@@ -36,6 +39,7 @@ const projects: Project[] = [
     date: "09/2025",
     href: "/work/bmtc",
     thumb: "from-sky-100 to-sky-50",
+    image: bmtcThumb,
     caption: "Reimagining trust in public transit",
   },
   {
