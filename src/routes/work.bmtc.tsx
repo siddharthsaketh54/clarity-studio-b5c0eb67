@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import type { ReactNode } from "react";
+import bmtcPrototype from "@/assets/bmtc-prototype.png";
 
 export const Route = createFileRoute("/work/bmtc")({
   head: () => ({
