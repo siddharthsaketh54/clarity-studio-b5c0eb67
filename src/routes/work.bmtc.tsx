@@ -504,6 +504,9 @@ function BMTCCase() {
                   real time decision making.
                 </P>
                 <div className="mt-10 -mx-2 md:-mx-6">
+                  <h3 className="text-[18px] md:text-[22px] tracking-[-0.015em] font-medium mb-6 px-2 md:px-6">
+                    Prototype
+                  </h3>
                   <img
                     src={bmtcPrototype}
                     alt="Namma BMTC redesign — prototype screens covering onboarding, home, nearby stops, tickets, passes, and SOS."
