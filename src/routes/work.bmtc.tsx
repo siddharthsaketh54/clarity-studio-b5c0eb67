@@ -514,6 +514,18 @@ function BMTCCase() {
               </Section>
 
               <Section label="Final Reflection">
+                <P>
+                  This project taught me that designing for public systems is
+                  not about creating visually appealing interfaces alone. It
+                  is about reducing friction in people's everyday lives.
+                </P>
+                <P>
+                  By reframing BMTC through the lens of trust, reassurance,
+                  and commuter emotion, we explored how thoughtful experience
+                  design could help public transport feel more dependable,
+                  human, and usable at scale.
+                </P>
+              </Section>
             </div>
           </div>
 
