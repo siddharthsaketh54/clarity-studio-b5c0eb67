@@ -306,21 +306,41 @@ function BMTCCase() {
               </Section>
 
               <Section label="Information Architecture Redesign">
-                <P>
-                  We redesigned the IA around the commuter's primary actions:
-                </P>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 mt-4">
-                  <Bullet>Track Bus</Bullet>
-                  <Bullet>Nearby Stops</Bullet>
-                  <Bullet>Plan Journey</Bullet>
-                  <Bullet>Tickets</Bullet>
-                  <Bullet>SOS</Bullet>
-                </div>
-                <P className="mt-6">
-                  Instead of burying actions inside layered menus, the
-                  redesigned structure prioritized map-first navigation,
-                  live visibility, and quick decision-making.
-                </P>
+                <Method
+                  n="01"
+                  title="Onboarding"
+                  body="Login, Sign in."
+                />
+                <Method
+                  n="02"
+                  title="Home Screen"
+                  body="Nav bar: Home, Nearby Stops, SOS, Tickets, Profile. Dynamic Search Bar: Recent searches, nearby stops, Route No."
+                />
+                <Method
+                  n="03"
+                  title="Nearby Stops"
+                  body="Dynamic Search Bar (to change location) — Recent Searches, Nearby Stops (based on current location), Route No. (Live Tracking). Breadcrumbs: BMTC · Metro · KSRTC. Multiple cards with Upcoming Buses (to pin location) — Bus No, Destination, ETA."
+                />
+                <Method
+                  n="04"
+                  title="Tickets"
+                  body="Ticket — QR scanner, Select to and from, select ticket type. Passes — Select pass, select pass type."
+                />
+                <Method
+                  n="05"
+                  title="Live Tracking"
+                  body="Current status of bus, Map."
+                />
+                <Method
+                  n="06"
+                  title="SOS Screen"
+                  body="BMTC helpline, Police, Ambulance, Fire."
+                />
+                <Method
+                  n="07"
+                  title="Profile"
+                  body="Name, etc., Share my location, Other Services, Feedback, Sign Out."
+                />
               </Section>
 
               <Section label="Key UX Interventions">
