@@ -112,10 +112,8 @@ function Index() {
             </Link>
           </div>
 
-          {/* Mark / signature */}
-          <div className="mt-16 text-foreground/40 text-[28px] leading-none select-none font-serif italic">
-            S<span className="accent-link not-italic font-sans text-[18px] align-top">·</span>
-          </div>
+
+
 
           {/* Contact */}
           <div className="mt-10 space-y-3 max-w-[360px]">
@@ -161,16 +159,12 @@ function Index() {
                       </div>
                     )}
                   </div>
-                  <div className="mt-3 flex items-baseline justify-between gap-4">
-                    <div>
-                      <h3 className="text-[15px] font-medium leading-tight">{p.title}</h3>
-                      <p className="text-[13px] text-muted-foreground mt-0.5">{p.category}</p>
-                    </div>
-                    <span className="text-[13px] text-muted-foreground tabular-nums shrink-0">
-                      {p.date}
-                    </span>
+                  <div className="mt-3">
+                    <h3 className="text-[15px] font-medium leading-tight">{p.title}</h3>
+                    <p className="text-[13px] text-muted-foreground mt-0.5">{p.category}</p>
                   </div>
                 </article>
+
               );
 
               return p.external ? (
