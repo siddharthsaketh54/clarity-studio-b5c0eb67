@@ -41,9 +41,21 @@ export function CaseStudy({ data }: { data: CaseStudyData }) {
               <h1 className="mt-2 text-[28px] md:text-[36px] leading-[1.1] tracking-[-0.02em] font-medium">
                 {data.title}
               </h1>
-              <p className="mt-4 text-[15px] leading-[1.6] text-foreground/85 max-w-[40ch]">
-                {data.tagline}
+              <p className="mt-4 text-[15px] leading-[1.65] text-foreground/85 max-w-[46ch]">
+                {data.intro}
               </p>
+              {data.link && (
+                <div className="mt-6">
+                  <a
+                    href={data.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="accent-link text-[15px]"
+                  >
+                    {data.link.label} →
+                  </a>
+                </div>
+              )}
             </div>
 
             <div className="lg:col-span-7">
@@ -71,52 +83,6 @@ export function CaseStudy({ data }: { data: CaseStudyData }) {
             </Meta>
           </dl>
 
-          {/* Body — single editorial column */}
-          <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
-            <div className="lg:col-span-4">
-              <p className="text-[13px] uppercase tracking-wider text-muted-foreground sticky top-10">
-                Overview
-              </p>
-            </div>
-            <div className="lg:col-span-8 space-y-14 max-w-[60ch]">
-              <Section label="Intro">{data.intro}</Section>
-              {data.problem && <Section label="Problem">{data.problem}</Section>}
-              {data.strategy && <Section label="Strategy">{data.strategy}</Section>}
-
-              {data.process && data.process.length > 0 && (
-                <div>
-                  <h2 className="text-[13px] uppercase tracking-wider text-muted-foreground mb-4">
-                    Process
-                  </h2>
-                  <ol className="divide-y divide-hairline border-y border-hairline">
-                    {data.process.map((step, i) => (
-                      <li key={i} className="py-4 flex gap-6 items-baseline">
-                        <span className="text-[13px] text-muted-foreground tabular-nums w-6">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <span className="text-[15px] leading-[1.55]">{step}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-              )}
-
-              {data.outcome && <Section label="Outcome">{data.outcome}</Section>}
-
-              {data.link && (
-                <div className="pt-4">
-                  <a
-                    href={data.link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="accent-link text-[15px]"
-                  >
-                    {data.link.label} →
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
 
           {/* Next */}
           <div className="mt-28 border-t border-hairline pt-8 flex items-baseline justify-between">
