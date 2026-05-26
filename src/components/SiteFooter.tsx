@@ -1,19 +1,41 @@
+import { Link, useRouterState } from "@tanstack/react-router";
+import { Home, User, Mail, FolderArchive } from "lucide-react";
+
 export function SiteFooter() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isHome = pathname === "/";
+  const isAbout = pathname === "/about";
+  const isWork = pathname.startsWith("/work");
+
   return (
-    <footer className="px-6 md:px-16 lg:px-24 mt-32 pb-12">
-      <div className="mx-auto max-w-[1280px] flex flex-col md:flex-row gap-3 md:items-end md:justify-between text-[13px] text-muted-foreground">
-        <div className="space-y-0.5">
-          <p className="text-foreground">Siddharth</p>
-          <p>Designing clarity between people, systems, and technology.</p>
-        </div>
-        <div className="flex flex-col md:items-end gap-1.5">
-          <a href="mailto:siddharthsaketh54@gmail.com" className="accent-link">
+    <>
+      <footer className="px-5 md:px-8 mt-32 pb-28">
+        <div className="mx-auto max-w-[760px] flex flex-col gap-2 text-[13px] text-muted-foreground">
+          <a href="mailto:siddharthsaketh54@gmail.com" className="accent-link w-fit">
             siddharthsaketh54@gmail.com
           </a>
-          <p className="tabular-nums mt-2">© {new Date().getFullYear()} Siddharth</p>
+          <p className="tabular-nums">© {new Date().getFullYear()} Siddharth</p>
         </div>
-      </div>
-    </footer>
+      </footer>
+
+      <nav className="dock" aria-label="Primary">
+        <Link to="/" className="dock-item" data-active={isHome}>
+          <Home className="w-4 h-4" />
+          <span className="hidden sm:inline">Home</span>
+        </Link>
+        <Link to="/" hash="work" className="dock-item" data-active={isWork}>
+          <FolderArchive className="w-4 h-4" />
+          <span className="hidden sm:inline">Work</span>
+        </Link>
+        <Link to="/about" className="dock-item" data-active={isAbout}>
+          <User className="w-4 h-4" />
+          <span className="hidden sm:inline">About</span>
+        </Link>
+        <a href="mailto:siddharthsaketh54@gmail.com" className="dock-item">
+          <Mail className="w-4 h-4" />
+          <span className="hidden sm:inline">Contact</span>
+        </a>
+      </nav>
+    </>
   );
 }
-
