@@ -72,20 +72,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Siddharth — Human-Centered Designer" },
+      { title: "Siddharth — Designer" },
       {
         name: "description",
         content:
           "Portfolio of Siddharth, a human-centered designer focused on visual communication, digital experiences, and brand systems.",
       },
       { name: "author", content: "Siddharth" },
-      { property: "og:title", content: "Siddharth — Human-Centered Designer" },
+      { property: "og:title", content: "Siddharth — Designer" },
       {
         property: "og:description",
         content: "Designing clarity between people, systems, and technology.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Siddharth — Designer" },
+      { name: "description", content: "A hyper-minimal portfolio website for a multidisciplinary designer." },
+      { property: "og:description", content: "A hyper-minimal portfolio website for a multidisciplinary designer." },
+      { name: "twitter:description", content: "A hyper-minimal portfolio website for a multidisciplinary designer." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7911154f-fa28-4991-b474-7ebaebb166f5/id-preview-cd30f7ab--e90f2d76-cd52-45be-8218-e84800a904de.lovable.app-1779775385820.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7911154f-fa28-4991-b474-7ebaebb166f5/id-preview-cd30f7ab--e90f2d76-cd52-45be-8218-e84800a904de.lovable.app-1779775385820.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
