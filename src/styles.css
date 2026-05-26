@@ -162,6 +162,84 @@
     border-color: color-mix(in oklab, var(--color-foreground) 20%, transparent);
   }
 
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 9999px;
+    background: color-mix(in oklab, var(--color-foreground) 7%, transparent);
+    color: var(--color-foreground);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+  }
+  .pill:hover {
+    background: color-mix(in oklab, var(--color-foreground) 12%, transparent);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.15rem 0.55rem 0.15rem 0.25rem;
+    border-radius: 9999px;
+    background: color-mix(in oklab, var(--color-foreground) 6%, transparent);
+    font-weight: 600;
+    vertical-align: baseline;
+  }
+  .chip-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .dock {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.4rem;
+    border-radius: 9999px;
+    background: color-mix(in oklab, var(--color-background) 70%, white 30%);
+    border: 1px solid var(--color-hairline);
+    box-shadow: 0 10px 30px -10px color-mix(in oklab, var(--color-foreground) 18%, transparent);
+    backdrop-filter: blur(12px);
+    z-index: 50;
+  }
+  .dock-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 9999px;
+    color: var(--color-muted-foreground);
+    font-size: 13px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .dock-item:hover { color: var(--color-foreground); background: color-mix(in oklab, var(--color-foreground) 6%, transparent); }
+  .dock-item[data-active="true"] {
+    color: var(--color-foreground);
+    background: color-mix(in oklab, var(--color-foreground) 8%, transparent);
+  }
+
+  .display-heading {
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+  }
+
   .link-underline {
     position: relative;
     display: inline-block;
